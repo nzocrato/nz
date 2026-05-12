@@ -1,0 +1,23 @@
+; SomaAreaPoligonais.PYMEN
+; Plugin TQS EAG V25 - Somatório de áreas de poligonais fechadas selecionadas
+;
+; Instalação:
+;   1. Copiar SomaAreaPoligonais.py e SomaAreaPoligonais.PYMEN para TQSW\EXEC\Python\
+;   2. Abrir (ou criar) o arquivo EAG.PYMEN em TQSW\EXEC\Python\
+;   3. Adicionar a linha abaixo dentro de EAG.PYMEN:
+;        INCLUIR,SomaAreaPoligonais.PYMEN
+;   O menu "Utilitários Python" aparecerá em todos os editores EAG a partir da V24.
+;
+; Obs.: linhas iniciadas com ";" são comentários e são ignoradas pelo TQS.
+
+[PYTHON]
+SomaAreaPoligonais.py
+
+[CMD]
+ID_SOMA_AREA_POLIGONAIS,SomaAreaPoligonais.py,soma_area_poligonais
+Calcular somatório de áreas das poligonais fechadas selecionadas
+
+[MENU]
+SUBMENU,&Utilitários Python
+MENUITEM,ID_SOMA_AREA_POLIGONAIS,&Somar Áreas de Polígonos
+FIMSUBMENU
