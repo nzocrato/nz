@@ -1,0 +1,366 @@
+//-----------------------------------------------------------------------------
+//      EAGTELS.MEN - 	Tela soldada - edicao de planta de telas
+//
+//-----------------------------------------------------------------------------
+//      DLLs
+//
+[DLL]
+EAGTELS
+EAGTELSF
+EAGBARR
+
+//-----------------------------------------------------------------------------
+//      Comandos do editor básico
+//
+INCLUIR,EAGCMD.SUB
+
+//-----------------------------------------------------------------------------
+//	Comandos básicos tratados pelo editor mínimo
+//
+[CMD]
+ID_ARQUIVO_NOVO,EAGTELS,aplic_arquivonovo
+Abrir arquivo Novo de desenho para edição
+
+ID_ARQUIVO_SALVAR,EAGTELS,aplic_arquivosalvar
+Salvar arquivo de desenho
+
+ID_ARQUIVO_ABRIR,EAGTELS,aplic_arquivoexistente
+Abrir arquivo de desenho existente para edição
+
+ID_ARQUIVO_FECHAR,EAGTELS,aplic_arquivofechar
+Fechar arquivo de desenho
+
+ID_ARQUIVO_SALVAR,EAGTELS,aplic_arquivosalvar
+Salvar arquivo de desenho
+
+ID_ARQUIVO_SALVARCOMO,EAGTELS,aplic_arquivosalvarcomo
+Salvar o desenho atual com um nome a ser fornecido
+
+ID_ARQUIVO_SAIR,EAGTELS,aplic_arquivosair
+Sair do editor
+
+ID_ARQUIVO_FIM,EAGTELS,aplic_fim
+Sair do editor
+
+ID_AJUDA_SOBRETELA,EAGTELS,apli_sobretela
+Sobre Telas Soldadas
+
+ID_TESTE,EAGW,eag_teste
+//-----------------------------------------------------------------------------
+//	Comandos de tela soldada
+//
+
+ID_DESFAZUL,EAGTELS,apl_desfazul
+Desfaz último(s) desenho(s) [Ctrl F1]
+
+ID_LSTTELAS,EAGTELS,apl_lsttelas
+Lista de telas catalogadas
+
+ID_ARM_DIAGARM,EAGTELS,apli_armdiagarm
+Mostrar diagramas de armaduras, considerando ou não armadura de base
+
+ID_ARM_DIAGPOS,EAGTELS,apli_armligadiagpos
+Ligar/Desligar os diagramas de armadura
+
+ID_ARM_TELATUAL,EAGTELS,apli_armtelatual
+Definir tela atual para inserção e outras utilidades para cálculo de armadura
+
+ID_ARM_LERTELA,EAGTELS,apli_armletela
+Ler a tela atual para uso na próxima inserção
+
+ID_ARM_INSERIRTELA,EAGTELS,apli_arminserirtela
+Inserir uma tela no desenho
+
+ID_ARM_CRIANTELA,EAGTELS,apli_crianvtela
+Criar uma nova tela para o projeto
+
+ID_ARM_INSERTELREF,EAGTELS,apli_arminsertelref
+Inserir uma tela no desenho tendo outra tela como referência ou laje/perímetro...
+
+ID_ARM_COPIAR,EAGTELS,apli_armcopiar
+Copiar uma tela, considerando traspasse
+
+ID_ARM_TROCARTELAS,EAGTELS,apli_trocartelas
+Trocar tela selecionada pela atual
+
+ID_ARM_DISTRIB_AUTM,EAGTELS,apli_armdistrib_laje_autom
+Distribuir automaticamente telas de armadura positiva em uma laje ou perímetro...
+
+ID_ARM_DISTRIBUIR,EAGTELS,apli_armdistribuir
+Distribuir telas em uma laje ou perímetro, por uma tela de referência...
+
+ID_ARM_DISTRIBUIR1DIR,EAGTELS,apli_armdistribuir1dir
+Distribuir telas em uma direção, por uma tela de referência...
+
+ID_ARM_PARDISTR,EAGTELS,apli_armpardistr
+Parâmetros de telas e distribuição...
+
+ID_ARM_MODIFICAR,EAGTELS,apli_armmodificar
+Modificar uma tela
+
+ID_ARM_AJUSTARFILEIRA,EAGTELS,apli_armajustarfileira
+Ajustar fileira de telas
+
+ID_ARM_INVFILA,EAGTELS,apli_arminverterfileira
+Inverter fileira de telas (por 2 ptos).
+
+ID_ARM_ELIMINARLAJE,EAGTELS,apli_armeliminarlaje
+Eliminar todas as telas de uma laje ou perímetro (contorno)
+
+ID_ARM_ELIMINARLINHA,EAGTELS,apli_armeliminarlinha
+Eliminar todas as telas por uma linha
+
+
+ID_IDENT_POSATU,EAGTELS,apli_identposatu
+Definir o número da posição atual para próxima identificação
+
+ID_IDENT_PROXPOSATU,EAGTELS,apli_identproxpos
+Determinar o número da próxima posição disponível
+
+ID_IDENT_IDENTTELA,EAGTELS,apli_identidenttela
+Identificar uma tela
+
+ID_IDENT_TEXTOTELATU,EAGTELS,apli_identtextotelatu
+Inserir texto de identificação da tela atual
+
+ID_IDENT_TEXTOPOSATU,EAGTELS,apli_identtextoposatu
+Inserir texto de posição atual
+
+ID_IDENT_RENUMERAR,EAGTELS,apli_identrenumerar
+Renumerar telas
+
+ID_IDENT_DETALHE,EAGTELS,apli_identdetalhe
+Identificar um detalhamento de telas (para repetição)...
+
+ID_IDENT_REPLICDET,EAGTELS,apli_replicdetalhe
+Replicar (duplicar) um detalhamento de telas (armaduras)...
+
+ID_IDENT_CERCARDETALHE,EAGTELS,apli_identcercardetalhe
+Cercar todas as telas associadas a um detalhe
+
+ID_IDENT_LIGARCERCA,EAGTELS,apli_ligarcerca
+Ligar ou desligar as cercas de detalhamentos da planta
+
+ID_IDENT_APONTAR,EAGTELS,apli_identapontar
+Desenhar uma linha de apontamento (informações ou faixa de distribuição)...
+
+ID_IDENT_LISTARTELAS,EAGTELS,apli_identlistartelas
+Listar todas as telas inseridas no desenho
+
+ID_IDENT_LISTARARMADURAS,EAGTELS,apli_identlistararmaduras
+Listar toda a armadura convencional
+
+ID_IDENT_TITULODESENHO,EAGTELS,apli_titulodesenho
+Inserir título que aparecerá na lista de telas
+
+ID_CONSISTENCIA,EAGTELS,apli_consistencia
+Consitência/Verificação de erros...
+
+ID_ARM_COT2PT,EAGTELS,apli_armcottrsp2p
+Cotar traspasses por 2 ptos
+
+ID_ARM_DIAGISOZ,EAGTELS,apli_armligaisocv
+Ligar/Desligar Isovalores/isocurvas de As
+
+ID_ARM_DIAGHORZ,EAGTELS,apli_armashoriz
+Isocurvas de As Horizontal(principal)
+
+ID_ARM_DIAGVERZ,EAGTELS,apli_armasvertz
+Isocurvas de As Vertical(secundária)
+
+ID_ARM_GRVDWGISO,EAGTELS,apli_gravdwgisodiagr
+Gravar desenho de diagrama e/ou isocurvas de As
+
+ID_TEL_ESQM_AUTMPL,EAGTELS,apli_esqm_plan_autm
+Esquema automático de cortes da planta...
+
+ID_TEL_ESQMAUT_EDIT,EAGTELS,apli_esqmaut_edit
+Esquema automático de cortes, visualização/edição...
+
+ID_TEL_ATU_ENTIDADS,EAGTELS,apli_atu_entidads_tel
+Atualiza representações de telas no projeto...
+
+ID_FILTRONIV,EAGTELS,apli_filtro_elms_tel
+Filtro de elementos (niveis)...
+
+ID_ARM_PESQTELLJ,EAGTELS,apli_pesq_tel_laj
+Pesquisar Tela para uma laje/região/As definido...
+
+ID_REGER_PLTT,EAGW,eag_viregn
+Regerar Planta (desenho), limpar sujeiras na tela
+
+ID_ARM_DEF_PERIM,EAGTELS,apli_perim_tels
+Definir ou alterar perímetro (contorno) para distribuição de telas...
+
+ID_ARM_PREENCH_BORDS,EAGTELS,apli_preench_bord_lj
+Preencher bordas de laje/perímetro incompleto(a)...
+
+//-----------------------------------------------------------------------------
+//      Menus padrão
+//
+[MENU]
+INCLUIR,EAGARQV.SUB
+INCLUIR,EAGEDIT.SUB
+INCLUIR,EAGEXIB.SUB
+INCLUIR,EAGINSR.SUB
+INCLUIR,EAGBLOC.SUB
+INCLUIR,EAGMODF.SUB
+INCLUIR,EAGCOTG.SUB
+
+//-----------------------------------------------------------------------------
+//      Menus de tela soldada
+//
+
+SUBMENU,A&rmadura
+	MENUITEM,ID_ARM_DIAGARM,&Diagramas de armaduras
+	SUBMENU,&Inserção
+                MENUITEM,ID_REGER_PLTT,&Regerar desenho/planta
+		MENUITEM,ID_ARM_TELATUAL,&Definir tela atual
+                MENUITEM,ID_ARM_DEF_PERIM,De&finir/alterar perímetro (contorno)
+                MENUITEM,ID_ARM_PESQTELLJ,&Pesquisar tela p/ uma laje
+		MENUITEM,ID_ARM_INSERIRTELA,&Inserir uma tela
+                MENUITEM,ID_ARM_INSERTELREF,Inserir tela/re&ferência
+		MENUITEM,ID_ARM_LERTELA,&Ler dados de tela e tornar atuais
+		MENUITEM,ID_ARM_CRIANTELA,&Criar um novo tipo de tela
+	FIMSUBMENU
+	SUBMENU,&Modificação
+		MENUITEM,ID_ARM_MODIFICAR,&Modificar comprimento
+		MENUITEM,ID_ARM_TROCARTELAS,&Trocar tela selecionada pela atual
+		MENUITEM,ID_ARM_ELIMINARLAJE,&Eliminar todas de uma laje/perímetro
+		MENUITEM,ID_ARM_ELIMINARLINHA,Eliminar todas as telas por uma &linha
+		MENUITEM,ID_ARM_COT2PT,Cotar traspasses de telas por uma &linha
+	FIMSUBMENU
+	SUBMENU,Di&stribuição
+		MENUITEM,ID_ARM_DISTRIB_AUTM,&Distribuir automaticamente
+		MENUITEM,ID_ARM_DISTRIBUIR,Distri&buir/tela de Referência
+		MENUITEM,ID_ARM_DISTRIBUIR1DIR,Distribuir em &uma direção/Referência
+		MENUITEM,ID_ARM_INVFILA,&Inverter fileira
+		MENUITEM,ID_ARM_COPIAR,&Copiar
+		MENUITEM,ID_ARM_AJUSTARFILEIRA,&Ajustar fileira
+                MENUITEM,ID_ARM_PREENCH_BORDS,Preencher laje/perímetro incompleto...
+	FIMSUBMENU
+        MENUITEM,ID_ARM_PARDISTR,&Parâmetros de telas e distribuição
+        SEPARADOR
+        MENUITEM,ID_FILTRONIV,&Filtro de elementos (niveis)...
+FIMSUBMENU
+
+SUBMENU,&Identificação
+	SUBMENU,&Têxto de identificação
+		MENUITEM,ID_IDENT_POSATU,&Posição atual
+		MENUITEM,ID_IDENT_IDENTTELA,Identificar &uma tela
+		MENUITEM,ID_IDENT_TEXTOTELATU,Inserir texto da tela &atual
+		MENUITEM,ID_IDENT_TEXTOPOSATU,Inserir texto de p&osição
+		MENUITEM,ID_IDENT_RENUMERAR,&Renumerar telas
+	FIMSUBMENU
+	SUBMENU,&Detalhamentos
+		MENUITEM,ID_IDENT_DETALHE,&Identificar 1 detalhamento de telas
+		MENUITEM,ID_IDENT_REPLICDET,Repli&car (duplicar) um detalhamento
+//desativada_120921_p/dani		MENUITEM,ID_IDENT_LIGARCERCA,liga/desliga Cercas de detalhamento
+	FIMSUBMENU
+	MENUITEM,ID_IDENT_APONTAR,&Apontar
+	MENUITEM,ID_IDENT_LISTARTELAS,&Listar telas
+	MENUITEM,ID_IDENT_LISTARARMADURAS,Listar armadura &convencional
+      MENUITEM,ID_IDENT_TITULODESENHO,&Título do desenho
+      SEPARADOR
+      MENUITEM,ID_CONSISTENCIA,Consistência/&Verif. de Erros...
+      MENUITEM,ID_ARM_DIAGISOZ,Isovalores de As
+      MENUITEM,ID_ARM_GRVDWGISO,Gravar desenho de isocurvas/diagrama
+      SEPARADOR
+      MENUITEM,ID_TEL_ESQM_AUTMPL,Esquema automático de cortes da planta...
+FIMSUBMENU
+
+//  INCLUIR,EAGAJUD.SUB  - Nao Incluir este SUB-Menu...
+[MENU]
+SUBMENU,A&juda
+        MENUITEM,ID_ARQUIVO_HELP,&Aceleradores
+        MENUITEM,ID_AJUDA_MANUAIS,&Manuais	<F1>
+	SEPARADOR
+        MENUITEM,ID_AJUDA_SOBRETELA,&Sobre...
+        MENUITEM,ID_TEL_ATU_ENTIDADS,Atualiza entidades...
+FIMSUBMENU
+//-----------------------------------------------------------------------------
+//
+//      Biblioteca de blocos
+//
+INCLUIR,BIBBLO.DAT
+//-----------------------------------------------------------------------------
+//	Barras de ferramentas
+//
+[BARRAS]
+BARRA,IDR_BARINS,EAGTELS,Inserção
+Planta de telas: Inserção de telas
+BOTAO,ID_REGER_PLTT,Regerar desenho/planta
+BOTAO,ID_ARM_TELATUAL,Tela atual
+BOTAO,ID_ARM_DEF_PERIM,Definir/alterar perímetro (contorno) p/telas
+BOTAO,ID_ARM_PESQTELLJ,Pesquisar tela para uma laje
+SEPARADOR
+SEPARADOR
+SEPARADOR
+SEPARADOR
+SEPARADOR
+SEPARADOR
+SEPARADOR
+BOTAO,ID_ARM_INSERIRTELA,Inserir uma tela no desenho
+BOTAO,ID_ARM_INSERTELREF,Inserir tela/re&ferência
+BOTAO,ID_ARM_LERTELA,Ler a tela atual
+BOTAO,ID_ARM_MODIFICAR,Modificar tela
+BOTAO,ID_ARM_TROCARTELAS,Trocar tela selecionada pela atual
+BOTAO,ID_ARM_ELIMINARLAJE,Eliminar todas as telas de uma laje ou perímetro (contorno)
+BOTAO,ID_ARM_ELIMINARLINHA,Eliminar todas as telas por uma linha
+BOTAO,ID_ARM_CRIANTELA,Criar uma nova tela para o projeto
+BOTAO,ID_ARM_COT2PT,Cotar traspasses de telas por uma linha
+SEPARADOR
+BOTAO,ID_ARM_DISTRIB_AUTM,Distribuir automaticamente telas de As positiva em uma laje
+BOTAO,ID_ARM_DISTRIBUIR,Distribuir telas de As positiva em uma laje/ tela de referência
+BOTAO,ID_ARM_DISTRIBUIR1DIR,Distribuir telas em uma direção/Referência
+BOTAO,ID_ARM_INVFILA,Inverter fileira de telas
+BOTAO,ID_ARM_COPIAR,Copiar uma tela, considerando traspasse
+BOTAO,ID_ARM_AJUSTARFILEIRA,Ajustar fileira de telas
+BOTAO,ID_ARM_PREENCH_BORDS,Preencher laje/perímetro incompleto...
+BOTAO,ID_ARM_PARDISTR,Parâmetros de telas e distribuição...
+SEPARADOR
+BOTAO,ID_FILTRONIV,Filtro de elementos (niveis)...
+
+BARRA,IDR_BARIDENT,EAGTELS,Identificação
+Planta de telas: Identificação de telas
+SEPARADOR
+SEPARADOR
+SEPARADOR
+BOTAO,ID_IDENT_PROXPOSATU,Próxima posição disponível
+BOTAO,ID_IDENT_RENUMERAR,Renumerar telas
+BOTAO,ID_IDENT_IDENTTELA,Identificar uma tela
+BOTAO,ID_IDENT_TEXTOTELATU,Texto de identificação da tela atual
+BOTAO,ID_IDENT_TEXTOPOSATU,Inserir texto de posição atual
+SEPARADOR
+BOTAO,ID_IDENT_DETALHE,Identificar um de detalhamento de telas...
+BOTAO,ID_IDENT_REPLICDET,Replicar (duplicar) um detalhamento de telas...
+//desativada_120921_p/dani BOTAO,ID_IDENT_LIGARCERCA,Ligar ou desligar as cercas de detalhamento
+SEPARADOR
+BOTAO,ID_IDENT_APONTAR,Linha de apontamento (notificação/faixas)...
+BOTAO,ID_IDENT_LISTARTELAS,Listar telas
+BOTAO,ID_IDENT_LISTARARMADURAS,Listar armadura convencional
+SEPARADOR
+BOTAO,ID_CONSISTENCIA,Consistência/Verif. de erros...
+SEPARADOR
+BOTAO,ID_TEL_ESQM_AUTMPL,Esquema automático de cortes da planta...
+
+BARRA,IDR_BARDIAG,EAGTELS,Diagramas de armaduras
+Planta de telas: Diagramas de armaduras
+BOTAO,ID_ARM_DIAGPOS,Ligar/Desligar diagramas de armadura
+SEPARADOR
+SEPARADOR
+SEPARADOR
+BOTAO,ID_ARM_DIAGARM,EAGTELS,Parâmetros do diagrama
+SEPARADOR
+BOTAO,ID_ARM_DIAGISOZ,Ligar/Desligar Isovalores de As
+BOTAO,ID_ARM_DIAGHORZ,Isovalores de As Horizontal(principal)
+BOTAO,ID_ARM_DIAGVERZ,Isovalores de As Vertical(secundária)
+SEPARADOR
+BOTAO,ID_ARM_GRVDWGISO,Gravar desenho de isocurvas/diagrama
+//-----------------------------------------------------------------------------
+//      Barras de ferramentas padrao
+//...
+INCLUIR,EAGBARR.SUB
+
+[RIBBON]
+
